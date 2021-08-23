@@ -11,7 +11,7 @@ export const SocketProvider: React.FC = ({ children }) => {
   const [socket, setSocket] = useState({} as Socket);
 
   useEffect(() => {
-    const newSocket = io(`http://18.224.32.117:4001/`);
+    const newSocket = io(`https://cakey-api.herokuapp.com`);
 
     newSocket.on('connect', () => {
       setSocket(newSocket);
