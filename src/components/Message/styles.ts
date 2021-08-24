@@ -13,6 +13,8 @@ export const Container = styled.div<IContainer>`
   border-radius: 0.75rem;
   margin-left: ${({ isUser }) => (isUser ? 'auto' : 0)};
 
+  word-wrap: break-word;
+
   ${({ fromServer, isUser }) =>
     fromServer
       ? css`
