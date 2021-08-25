@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
 import { SocketProvider } from './contexts/SocketContext';
+import { Router } from './routes';
+import { GlobalStyles } from './styles/global';
 
 ReactDOM.render(
   <React.StrictMode>
     <SocketProvider>
-      <App />
+      <GlobalStyles />
+      <Router />
     </SocketProvider>
   </React.StrictMode>,
   document.getElementById('root')
