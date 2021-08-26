@@ -14,6 +14,7 @@ export const MessageComponent = ({ message }: IMessageComponent) => {
     <Container
       isUser={socket.id === message.userId}
       fromServer={message.fromServer}
+      userColor={message.userColor}
     >
       <MessageText>{message.text}</MessageText>
 

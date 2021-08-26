@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components';
 interface IContainer {
   isUser: boolean;
   fromServer: boolean;
+  userColor: string;
 }
 
 export const Container = styled.div<IContainer>`
@@ -15,7 +16,7 @@ export const Container = styled.div<IContainer>`
 
   word-wrap: break-word;
 
-  ${({ fromServer, isUser }) =>
+  ${({ fromServer, isUser, userColor }) =>
     fromServer
       ? css`
           width: fit-content;
@@ -27,7 +28,7 @@ export const Container = styled.div<IContainer>`
       : css`
           width: 70%;
           padding: 1rem;
-          background-color: ${isUser ? '#E2C0FF' : '#bafeba'};
+          background-color: ${isUser ? '#E2C0FF' : userColor};
         `}
 `;
 

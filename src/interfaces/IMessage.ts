@@ -3,5 +3,6 @@ export interface IMessage {
   username: string;
   text: string;
   fromServer: boolean;
+  userColor: string;
   createdAt: Date;
 }
